@@ -1,0 +1,8 @@
+
+{
+	"run_list":[ 
+		"instApp"
+//		"instApp:: default.rb",
+//		"instApp:: instSettingsFiles.rb"
+	]
+}
