@@ -22,6 +22,7 @@ log "install settings files"
 log "install .zshrc .alias .emacs.el"
 
 template "zshrc" do
+<<<<<<< HEAD
   path "/home/vagrant/.zshrc"
   source "zshrc.erb"
   owner "vagrant"
