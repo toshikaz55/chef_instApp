@@ -6,10 +6,8 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-log "install some apps"
 
 log "install zsh emacs w3m lynx"
-
 %w{ zsh emacs tree w3m lynx }.each do |pkg|
   log pkg
   package pkg do
@@ -17,12 +15,8 @@ log "install zsh emacs w3m lynx"
   end
 end
 
-log "install settings files"
-
-log "install .zshrc .alias .emacs.el"
 
 template "zshrc" do
-<<<<<<< HEAD
   path "/home/vagrant/.zshrc"
   source "zshrc.erb"
   owner "vagrant"
