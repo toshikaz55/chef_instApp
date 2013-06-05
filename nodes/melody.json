@@ -1,5 +1,6 @@
 {
 	"run_list":[
-		"instApp"
+		"instApp::instApp",
+		"instApp::instSettings"
 	]
 }
