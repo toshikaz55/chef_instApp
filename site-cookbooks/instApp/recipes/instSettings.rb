@@ -40,9 +40,9 @@ directory '#{node.user.home}/.emacs.d/lisp/' do
   action :create
 end
 
-template "init.el" do
+cookbook_file "#{node.user.home}/.emacs.d/init.el" do
   path "#{node.user.home}/.emacs.d/init.el"
-  source "init.el.erb"
+  source "init.el"
   owner "#{node.user.user_id}"
   group "#{node.user.group_id}"
   mode 0644
