@@ -8,7 +8,7 @@
 #
 
 log "install zsh emacs w3m lynx"
-%w{ zsh emacs sqlite-devel ruby tree w3m lynx }.each do |pkg|
+%w{ zsh emacs ntp sqlite-devel ruby tree w3m lynx }.each do |pkg|
   log pkg
   package pkg do
     action :install

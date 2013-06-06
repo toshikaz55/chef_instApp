@@ -1,3 +1,4 @@
+# encoding: utf-8
 #
 # Cookbook Name:: instApp
 # Recipe:: instSettings
@@ -8,48 +9,50 @@
 #
 
 template "zshrc" do
-  path "/home/vagrant/.zshrc"
+  path "#{node.user.home}/.zshrc"
   source "zshrc.erb"
-  owner "vagrant"
-  group "vagrant"
+  owner "#{node.user.user_id}"
+  group "#{node.user.group_id}"
   mode 0644
 end
 
 template "alias" do
-  path "/home/vagrant/.alias"
+  path "#{node.user.home}/.alias"
   source "alias.erb"
-  owner "vagrant"
-  group "vagrant"
+  owner "#{node.user.user_id}"
+  group "#{node.user.group_id}"
   mode 0644
 end
 
-directory '/home/vagrant/.emacs.d/' do
-  owner "vagrant"
-  group "vagrant"
+directory '#{node.user.home}/.emacs.d/' do
+  path "#{node.user.home}/.emacs.d/"
+  owner "#{node.user.user_id}"
+  group "#{node.user.group_id}"
   mode 0755
   action :create
 end
 
-directory '/home/vagrant/.emacs.d/lisp/' do
-  owner "vagrant"
-  group "vagrant"
+directory '#{node.user.home}/.emacs.d/lisp/' do
+  path "#{node.user.home}/.emacs.d/lisp/"
+  owner "#{node.user.user_id}"
+  group "#{node.user.group_id}"
   mode 0755
   action :create
 end
 
 template "init.el" do
-  path "/home/vagrant/.emacs.d/init.el"
+  path "#{node.user.home}/.emacs.d/init.el"
   source "init.el.erb"
-  owner "vagrant"
-  group "vagrant"
+  owner "#{node.user.user_id}"
+  group "#{node.user.group_id}"
   mode 0644
 end
 
-cookbook_file "/home/vagrant/.emacs.d/lisp/jaspace.el" do
-  path "/home/vagrant/.emacs.d/lisp/jaspace.el"
+cookbook_file "#{node.user.home}/.emacs.d/lisp/jaspace.el" do
+  path "#{node.user.home}/.emacs.d/lisp/jaspace.el"
   source "jaspace.el"
-  owner "vagrant"
-  group "vagrant"
+  owner "#{node.user.user_id}"
+  group "#{node.user.group_id}"
   mode 0644
 end
 

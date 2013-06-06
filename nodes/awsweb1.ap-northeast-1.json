@@ -1,0 +1,12 @@
+{
+    "user": {
+        "home" : "/home/ec2-user",
+		"user_id" : "ec2-user",
+		"group_id" : "ec2-user"
+    },
+
+	"run_list":[
+		"instApp::instApp",
+		"instApp::instSettings"
+		]
+}

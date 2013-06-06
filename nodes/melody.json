@@ -1,4 +1,10 @@
 {
+	"user": {
+		"home" : "/home/vagrant",
+		"user_id" : "vagrant",
+		"group_id" : "vagrant"
+	},
+
 	"run_list":[
 		"instApp::instApp",
 		"instApp::instSettings"
