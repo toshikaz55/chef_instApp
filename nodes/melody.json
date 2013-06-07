@@ -5,8 +5,14 @@
 		"group_id" : "vagrant"
 	},
 
+	"timezone": {
+		"zone" : "Japan",
+		"timezone" : "Asia/Tokyo"
+	},
+
 	"run_list":[
 		"instApp::instApp",
-		"instApp::instSettings"
+		"instApp::instSettings",
+		"instApp::setTimeZone"
 	]
 }

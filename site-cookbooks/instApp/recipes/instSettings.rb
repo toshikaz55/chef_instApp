@@ -16,6 +16,13 @@ template "zshrc" do
   mode 0644
 end
 
+bash "chsh /bin/bash -> /bin/zsh " do
+  code <<-EOC
+    chsh -s /bin/zsh
+  EOC
+end
+
+
 template "alias" do
   path "#{node.user.home}/.alias"
   source "alias.erb"
