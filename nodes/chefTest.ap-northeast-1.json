@@ -14,6 +14,7 @@
 	"run_list":[
 		"instApp::instApp",
 		"instApp::instSettings",
-		"instApp::setTimeZone"
+		"instApp::setTimeZone",
+		"instApp::instRailsAWS"
 		]
 }

@@ -125,53 +125,6 @@ function mdview() {
     markdown $1 | lynx -stdin
 }
 
-#alias ls="ls -F -G"
-#alias la="ls -a"
-#alias ll="ls -lhrt"
-
-#alias du="du -h"
-#alias df="df -h"
-
-#alias su="su -l"
-
-#alias rlogin="slogin -i $HOME/.ssh/nopass-dsa"
-
-#alias python="source ~/works/python27/bin/activate;\python"
-
-#if [ $SHLVL = 1 ]; then
-#    alias tmux="tmux attach || tmux new-session \; source-file ~/.tmux_session"
-#fi
-
-#alias opensb="open -a sublime\ text\ 2"
-
-## uninstall port ---> install brew
-#
-#case "${OSTYPE}" in
-#darwin*)
-#    alias updateports="sudo port selfupdate; sudo port outdated"
-#    alias portupgrade="sudo port upgrade installed"
-#    ;;
-#freebsd*)
-#    case ${UID} in
-#    0)
-#        updateports() 
-#        {
-#            if [ -f /usr/ports/.portsnap.INDEX ]
-#            then
-#                portsnap fetch update
-#            else
-#                portsnap fetch extract update
-#            fi
-#            (cd /usr/ports/; make index)
-#
-#            portversion -v -l \<
-#        }
-#        alias appsupgrade='pkgdb -F && BATCH=YES NO_CHECKSUM=YES portupgrade -a'
-#        ;;
-#    esac
-#    ;;
-#esac
-
 
 ## terminal configuration
 #

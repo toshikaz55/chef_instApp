@@ -37,6 +37,7 @@ directory '#{node.user.home}/.emacs.d/' do
   group "#{node.user.group_id}"
   mode 0755
   action :create
+#  not_if { File.exists "#{node.user.home}/.emacs.d" }
 end
 
 directory '#{node.user.home}/.emacs.d/lisp/' do
@@ -45,6 +46,7 @@ directory '#{node.user.home}/.emacs.d/lisp/' do
   group "#{node.user.group_id}"
   mode 0755
   action :create
+#  not_if { File.exists "#{node.user.home}/.emacs.d/lisp" }
 end
 
 cookbook_file "#{node.user.home}/.emacs.d/init.el" do
